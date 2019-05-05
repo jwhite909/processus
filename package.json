@@ -1,0 +1,22 @@
+{
+  "name": "processus",
+  "version": "0.0.1",
+  "description": "petit test pour mapper un processus à l'aide de d3 et de dagre-d3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwhite909/processus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwhite909/processus/issues"
+  },
+  "homepage": "https://github.com/jwhite909/processus#readme",
+  "dependencies": {
+    "dagre-d3": "^0.6.3"
+  }
+}
