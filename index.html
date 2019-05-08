@@ -43,11 +43,11 @@ body {
 // Create a new directed graph
 var g = new dagreD3.graphlib.Graph({compound:true}).setGraph({}).setDefaultEdgeLabel(function() { return {}; });
 
-g.setNode(0,{label:"rect", class: "rect" });
-g.setNode(1,{label:"circle", class: "circle" });
-g.setNode(2,{label:"ellipse", class: "ellipse" });
-g.setNode(3,{label:"diamond", class: "diamond" });
-g.setNode(4,{label:"Groupe A", class: "rect",style: 'fill: #5f9488', clusterLabelPos: 'top'});
+g.setNode(0,{label:"activité A", class: "rect" });
+g.setNode(1,{label:"Activité B", class: "circle" });
+g.setNode(2,{label:"Activité C", class: "ellipse" });
+g.setNode(3,{label:"Activité décisionnelle", class: "diamond" });
+g.setNode(4,{label:"Section A", class: "rect",style: 'fill: #5f9488', clusterLabelPos: 'top'});
 g.setEdge(0, 1);
 g.setEdge(1, 2);
 g.setEdge(2, 3);
