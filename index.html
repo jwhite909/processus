@@ -41,13 +41,19 @@ body {
 
 <script>
 // Create a new directed graph
-var g = new dagreD3.graphlib.Graph().setGraph({});
+var g = new dagreD3.graphlib.Graph({compound:true}).setGraph({}).setDefaultEdgeLabel(function() { return {}; });
 
-g.setNode("rect", { shape: "rect" });
-g.setNode("circle", { shape: "circle" });
-g.setNode("ellipse", { shape: "ellipse" });
-g.setNode("diamond", { shape: "diamond" });
-
+g.setNode(0,{label:"rect", class: "rect" });
+g.setNode(1,{label:"circle", class: "circle" });
+g.setNode(2,{label:"ellipse", class: "ellipse" });
+g.setNode(3,{label:"diamond", class: "diamond" });
+g.setNode(4,{label:"Groupe A", class: "rect",style: 'fill: #5f9488', clusterLabelPos: 'top'});
+g.setEdge(0, 1);
+g.setEdge(1, 2);
+g.setEdge(2, 3);
+g.setEdge(3, 1);
+g.setParent('2', '4');
+g.setParent('3', '4');
 var svg = d3.select("svg"),
     inner = svg.select("g");
 
